@@ -4,5 +4,5 @@ const (
 	Success       = 200
 	Error         = 500
 	InvalidParams = 400
-
+	MobileError   = 10001
 )
