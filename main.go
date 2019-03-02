@@ -8,7 +8,6 @@ import (
 	"os"
 	"os/signal"
 	"time"
-	"vote/models"
 	"vote/routers"
 	"vote/utils/logging"
 	"vote/utils/setting"
@@ -16,7 +15,7 @@ import (
 
 func main() {
 	setting.Setup()
-	models.Setup()
+	//models.Setup()
 	logging.Setup()
 
 	router := routers.InitRouter()
