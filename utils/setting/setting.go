@@ -2,6 +2,7 @@ package setting
 
 import (
 	"log"
+	"os"
 	"time"
 
 	"github.com/go-ini/ini"
@@ -42,10 +43,13 @@ var DatabaseSetting = &Database{}
 var cfg *ini.File
 
 func Setup() {
+
 	var err error
-	cfg, err = ini.Load("conf/app.ini")
+	dir, _ := os.Getwd()
+
+	cfg, err = ini.Load(dir + "/conf/app.ini")
 	if err != nil {
-		log.Fatalf("Fail to parse 'conf/app.ini': %v", err)
+		log.Fatalf("Fail to parse"+dir+" '/conf/app.ini': %v", err)
 	}
 
 	mapTo("app", AppSetting)

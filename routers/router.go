@@ -1,14 +1,18 @@
 package routers
 
 import (
-	_ "vote/docs"
 	"vote/routers/api/v1"
 	"vote/utils/setting"
+
+	_ "vote/docs"
 
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
+
+// @title Swagger Example API
+// @version 1.0
 
 func InitRouter() *gin.Engine {
 	r := gin.New()

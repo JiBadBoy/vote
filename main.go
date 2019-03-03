@@ -13,10 +13,19 @@ import (
 	"vote/utils/setting"
 )
 
-func main() {
+func init() {
 	setting.Setup()
 	//models.Setup()
 	logging.Setup()
+}
+
+// @title 投票系统
+// @version 1.0
+// @description 业务维护资金使用投票系统
+// @termsOfService http://123.206.34.236:8000/
+// @license.name MIT
+// @license.url https://github.com/JiBadBoy/vote
+func main() {
 
 	router := routers.InitRouter()
 	s := &http.Server{

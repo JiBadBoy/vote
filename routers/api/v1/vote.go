@@ -13,7 +13,7 @@ import (
 // @Summary 获取投票项目列表
 // @Product json
 // @Param mobile query string true "手机号码"
-// @Success 200 {string} json "{"code":200,"data":{},"msg":"ok"}"
+// @Success 200 {array} models.Tuse "{"code":200,"data":{},"msg":"ok"}"
 // @Router /api/v1/votes [get]
 func GetVotes(c *gin.Context) {
 	appG := app.Gin{c}
